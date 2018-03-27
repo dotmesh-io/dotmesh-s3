@@ -1,0 +1,11 @@
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+*.test
+*.out
+.DS_Store
+.vscode
+debug
+vendor/*
