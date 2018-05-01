@@ -8,6 +8,14 @@ It provides for an S3 server exposing and managing a local filesystem as an S3 s
 
 Note: the [Minio Go client](https://docs.minio.io/docs/golang-client-api-reference) can be used as a client for testing.
 
+## Design
+
+For the initial iteration, we are making the following assumptions:
+
+- The here provided S3 API is just one way to access it, that is, someone else may access the same data using, for example, via the `dm` CLI
+- An S3 bucket is represented in Dotmesh via a dot
+- There exists a unique mapping for object names (since they might be in a sub-directory and the path needs to be made part of the name)
+
 ## Operations
 
 The supported operations are:
